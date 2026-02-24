@@ -1,9 +1,12 @@
 import React from 'react';
+import restaurantfood from '../assets/restaurantfood.png'
+
 
 function Main() {
   return (
-    <main>
-      <section>
+    <main className='main'>
+      <section className='hero'>
+        <section className='hero-text'>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p>
@@ -11,11 +14,14 @@ function Main() {
           recipes served with a modern twist.
         </p>
         <button>Reserve a Table</button>
+        </section>
+        <section className='hero-img'>
+            <img scr={restaurantfood} alt="restaurant food"/>
+        </section>
       </section>
-      <section>
-      </section>
-      <section>
-      </section>
+      <section className='highlights'></section>
+      <section className='testimonials'></section>
+      <section className='about'></section>
     </main>
   );
 }

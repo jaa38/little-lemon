@@ -1,13 +1,15 @@
-import React from 'react'
-import logo from '../assets/Logo .svg'
-
+import React from 'react';
+import logo from '../assets/Logo .svg';
+import Nav from './Nav';
 
 function Header() {
   return (
-    <header>
-      <img src={logo} alt="Little Lemon Logo" />
+    <header className='header'>
+      <img className='logo' src={logo} alt='Little Lemon Logo' />
+
+      <Nav />
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

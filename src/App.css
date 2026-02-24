@@ -1,37 +1,121 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  display: grid;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  grid-template-areas: 'header' 'main' ' footer';
+
+  grid-template-rows: auto 1fr auto;
+  /* margin: 80px; */
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: #f4ce14;
+  width: auto;
+  height: 35px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 16px;
+  border-color: none;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: black;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+  padding: 32px 120px;
+}
+
+.logo {
+  height: 40px;
+  width: 148px;
+}
+
+.main {
+  display: grid;
+
+  grid-template-areas: 'hero' 'highlights' 'testimonials' 'about';
+
+  grid-template-rows: auto auto auto auto;
+}
+
+.main {
+  grid-area: main;
+  gap: 80px;
+}
+
+.hero {
+  display: grid;
+  grid-area: hero;
+  grid-template-columns: 1fr 1fr;
+  background-color: #495e57;
+  /* margin-left: 80px; */
+  padding: 80px 120px;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #f4ce14;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-text h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: white;
+  font-family: 'Markazi Text', serif;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  max-width: 500px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.highlights {
+  grid-area: highlights;
+}
+
+.testimonials {
+  grid-area: testimonials;
+}
+
+.about {
+  grid-area: about;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 80px 120px;
+  background-color: #495e57;
 }
 
 nav ul {
+  display: flex;
   list-style: none;
+  gap: 16px;
   margin: 0;
   padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
 }
 
 @keyframes App-logo-spin {
