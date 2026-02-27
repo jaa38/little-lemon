@@ -40,9 +40,7 @@ button {
 
 .main {
   display: grid;
-
   grid-template-areas: 'hero' 'highlights' 'testimonials' 'about';
-
   grid-template-rows: auto auto auto auto;
 }
 
@@ -84,8 +82,113 @@ button {
   font-family: 'Roboto', sans-serif;
 }
 
+.hero-img {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
 .highlights {
   grid-area: highlights;
+  padding: 0px 120px;
+}
+
+.highlights-part1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highlights-part1 h2 {
+  font-size: 40px;
+  font-weight: 500px;
+  font-family: 'Karla', sans-serif;
+  color: black;
+}
+
+.highlights-part1 button {
+  min-height: 60px;
+  width: fit-content;
+}
+
+.highlights-part2 {
+  display: grid;
+  gap: 32px;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.item-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.item-price h3 {
+  font-family: 'Markazi Text', serif;
+  line-height: 90%;
+  color: black;
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0;
+}
+
+.item-price p {
+  font-family: 'Karla', sans-serif;
+  line-height: auto;
+  color: #ee9972;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  background-color: #edefee;
+  min-height: 400px;
+  padding-bottom: 32px;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card-content {
+}
+
+.card-content p{
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #495E57
+}
+
+.information-section {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 1024px) {
+  .highlights-part2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .testimonials {
