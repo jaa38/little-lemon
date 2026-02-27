@@ -1,5 +1,9 @@
 import React from 'react';
 import restauranfood from '../assets/restauranfood.png';
+import greeksalad1 from '../assets/greeksalad1.png';
+import restraurantchef from '../assets/restaurantchef.png';
+import lemondessert2 from '../assets/lemondessert2.png';
+import ordericon from '../icons/orderIcon.svg'
 
 function Main() {
   return (
@@ -26,7 +30,7 @@ function Main() {
         <section className='highlights-part2'>
           <article className='card'>
             <section className='image-section'>
-              <img src='' alt='' />
+              <img src={greeksalad1} alt='' />
             </section>
             <section className='item-price'>
               <h3>Greek Salad</h3>
@@ -40,15 +44,18 @@ function Main() {
                   and rosemary croutons.{' '}
                 </p>
               </section>
-              <nav>
-                <a>Order Online</a>
-              </nav>
+              <section className='order-online'>
+                <nav>
+                  <a>Order Online</a>
+                  <img className='order-icon' src={ordericon} alt='Order Icon' />
+                </nav>
+              </section>
             </section>
           </article>
 
           <article className='card'>
             <section className='image-section'>
-              <img src='' alt='' />
+              <img src={restraurantchef} alt='greek salad' />
             </section>
             <section className='item-price'>
               <h3>Bruchetta</h3>
@@ -57,18 +64,22 @@ function Main() {
             <section className='information-section'>
               <section className='card-content'>
                 <p>
-                  Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. {' '}
+                  Our Bruschetta is made from grilled bread that has been
+                  smeared with garlic and seasoned with salt and olive oil.{' '}
                 </p>
               </section>
-              <nav>
-                <a>Order Online</a>
-              </nav>
+              <section className='order-online'>
+                <nav>
+                  <a>Order Online</a>
+                    <img className='order-icon' src={ordericon} alt='Order Icon' />
+                </nav>
+              </section>
             </section>
           </article>
 
           <article className='card'>
             <section className='image-section'>
-              <img src='' alt='' />
+              <img src={lemondessert2} alt='' />
             </section>
             <section className='item-price'>
               <h3>Lemon Dessert</h3>
@@ -77,12 +88,18 @@ function Main() {
             <section className='information-section'>
               <section className='card-content'>
                 <p>
-                  This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.{' '}
+                  This comes straight from grandma’s recipe book, every last
+                  ingredient has been sourced and is as authentic as can be
+                  imagined.{' '}
                 </p>
               </section>
-              <nav>
-                <a>Order Online</a>
-              </nav>
+              <section className='order-online'>
+                <nav>
+                  <a>Order Online</a>
+                <img className='order-icon' src={ordericon} alt='Order Icon' />
+
+                </nav>
+              </section>
             </section>
           </article>
         </section>

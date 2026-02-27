@@ -164,7 +164,7 @@ button {
   padding-bottom: 32px;
 }
 
-.card img {
+.image-section img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -189,6 +189,24 @@ button {
   .highlights-part2 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.order-online {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.order-online a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-family: 'Karla', sans-serif;
+}
+
+.order-icon {
+  height: 16px;
+  width: 25px
 }
 
 .testimonials {
