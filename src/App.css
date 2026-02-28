@@ -97,7 +97,7 @@ button {
 
 .highlights {
   grid-area: highlights;
-  padding: 0px 120px;
+  padding: 80px 120px;
   background-color: white;
 }
 

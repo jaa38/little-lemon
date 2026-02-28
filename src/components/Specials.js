@@ -7,19 +7,23 @@ import ordericon from '../icons/orderIcon.svg';
 function Specials() {
   return (
     <section className='highlights'>
+
         <section className='highlights-part1'>
           <h2>This weeks specials!</h2>
           <button>Online Menu</button>
         </section>
+
         <section className='highlights-part2'>
           <article className='card'>
             <section className='image-section'>
               <img src={greeksalad1} alt='' />
             </section>
+
             <section className='item-price'>
               <h3>Greek Salad</h3>
               <p>$12.99</p>
             </section>
+
             <section className='information-section'>
               <section className='card-content'>
                 <p>
@@ -28,9 +32,10 @@ function Specials() {
                   and rosemary croutons.{' '}
                 </p>
               </section>
+
               <section className='order-online'>
                 <nav>
-                  <a>Order Online</a>
+                  <a href='#'>Order Online</a>
                   <img
                     className='order-icon'
                     src={ordericon}
@@ -38,6 +43,7 @@ function Specials() {
                   />
                 </nav>
               </section>
+
             </section>
           </article>
 
