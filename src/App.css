@@ -98,6 +98,7 @@ button {
 .highlights {
   grid-area: highlights;
   padding: 0px 120px;
+  background-color: white;
 }
 
 .highlights-part1 {
@@ -173,11 +174,11 @@ button {
 .card-content {
 }
 
-.card-content p{
+.card-content p {
   font-family: 'Karla', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #495E57
+  color: #495e57;
 }
 
 .information-section {
@@ -206,15 +207,99 @@ button {
 
 .order-icon {
   height: 16px;
-  width: 25px
+  width: 25px;
 }
 
 .testimonials {
   grid-area: testimonials;
+  background-color: #495e57;
+  padding: 80px 120px;
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: 'Markazi Text', serif;
+  color: #f4ce14;
+  text-align: center;
+}
+
+section.testimonial-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.testimonial-card {
+  flex: 1 1 200px;
+  max-width: 250px;
+
+  min-height: 175px;
+  padding: 20px;
+
+  background: #edefee;
+  border-radius: 12px;
+}
+
+.testimonial-information {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.avatar {
+  height: 48px;
+  width: 48px;
+}
+
+.testimonial-content p {
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.testimonial-review p {
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
 }
 
 .about {
+  display: grid;
   grid-area: about;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  padding: 80px 120px;
+  gap: 80px;
+  align-self: center;
+}
+
+.about h1 {
+  font-size: 56px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #f4ce14;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: black;
+  font-family: 'Markazi Text', serif;
+}
+
+.about p {
+  margin-bottom: 20px;
+  max-width: 500px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer {

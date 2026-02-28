@@ -3,11 +3,19 @@ import restauranfood from '../assets/restauranfood.png';
 import greeksalad1 from '../assets/greeksalad1.png';
 import restraurantchef from '../assets/restaurantchef.png';
 import lemondessert2 from '../assets/lemondessert2.png';
-import ordericon from '../icons/orderIcon.svg'
+import ordericon from '../icons/orderIcon.svg';
+import avatar from '../assets/avatar.svg';
+import thechefs from '../assets/thechefs.png';
+
+import { Routes, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import BookingPage from '../pages/BookingPage';
 
 function Main() {
   return (
     <main className='main'>
+
+      {/* Here Section */}
       <section className='hero'>
         <section className='hero-text'>
           <h1>Little Lemon</h1>
@@ -22,6 +30,8 @@ function Main() {
           <img src={restauranfood} alt='restaurant food' />
         </section>
       </section>
+
+      {/* Highlights Section */}
       <section className='highlights'>
         <section className='highlights-part1'>
           <h2>This weeks specials!</h2>
@@ -47,7 +57,11 @@ function Main() {
               <section className='order-online'>
                 <nav>
                   <a>Order Online</a>
-                  <img className='order-icon' src={ordericon} alt='Order Icon' />
+                  <img
+                    className='order-icon'
+                    src={ordericon}
+                    alt='Order Icon'
+                  />
                 </nav>
               </section>
             </section>
@@ -71,7 +85,11 @@ function Main() {
               <section className='order-online'>
                 <nav>
                   <a>Order Online</a>
-                    <img className='order-icon' src={ordericon} alt='Order Icon' />
+                  <img
+                    className='order-icon'
+                    src={ordericon}
+                    alt='Order Icon'
+                  />
                 </nav>
               </section>
             </section>
@@ -96,16 +114,101 @@ function Main() {
               <section className='order-online'>
                 <nav>
                   <a>Order Online</a>
-                <img className='order-icon' src={ordericon} alt='Order Icon' />
-
+                  <img
+                    className='order-icon'
+                    src={ordericon}
+                    alt='Order Icon'
+                  />
                 </nav>
               </section>
             </section>
           </article>
         </section>
       </section>
-      <section className='testimonials'></section>
-      <section className='about'></section>
+
+      {/* Testimonials Section */}
+      <section className='testimonials'>
+        <h2>Testimonials</h2>
+
+        <section className='testimonial-cards'>
+          <article className='testimonial-card'>
+            <section className='testimonial-information'>
+              <img className='avatar' src={avatar} alt='avatar' />
+              <section className='testimonial-content'>
+                <p>John Williams</p>
+                <p>5 stars</p>
+              </section>
+            </section>
+            <section className='testimonial-review'>
+              <p>
+                "The Greek salad was incredibly fresh and full of favour.
+                Definitely coming back!"
+              </p>
+            </section>
+          </article>
+
+          <article className='testimonial-card'>
+            <section className='testimonial-information'>
+              <img className='avatar' src={avatar} alt='avatar' />
+              <section className='testimonial-content'>
+                <p>John Williams</p>
+                <p>5 stars</p>
+              </section>
+            </section>
+            <section className='testimonial-review'>
+              <p>
+                "Amazing atmosphere and the bruschetta was perfect. Service was
+                quick and friendly."
+              </p>
+            </section>
+          </article>
+
+          <article className='testimonial-card'>
+            <section className='testimonial-information'>
+              <img className='avatar' src={avatar} alt='avatar' />
+              <section className='testimonial-content'>
+                <p>John Williams</p>
+                <p>5 stars</p>
+              </section>
+            </section>
+            <section className='testimonial-review'>
+              <p>
+                "Loved the modern twist on classic Mediterranean dishes. Highly
+                recommended!"
+              </p>
+            </section>
+          </article>
+
+          <article className='testimonial-card'>
+            <section className='testimonial-information'>
+              <img className='avatar' src={avatar} alt='avatar' />
+              <section className='testimonial-content'>
+                <p>John Williams</p>
+                <p>5 stars</p>
+              </section>
+            </section>
+            <section className='testimonial-review'>
+              <p>
+                "Booked a table online and everything was smooth. Food and staff
+                were fantastic"
+              </p>
+            </section>
+          </article>
+        </section>
+      </section>
+
+      {/* About Section */}
+      <section className='about'>
+        <section className='about-information'>
+          <h1>Little Lemon</h1>
+          <h2>Chicago</h2>
+          <p>Little Lemon is a family-owned Mediterranean restaurant located in the heart of Chicago. Inspired by traditional recipes passed down through generations, we combine authentic flavours with a modern culinary twist. Our menu is crafted using fresh, seasonal ingredients t create dishes that are both vibrant and comforting. Whether you're joining us for a casual lunch, a special dinner, or a celebration with friends, our goal is to provide warm hospitality and an unforgettable dining experience.</p>
+        </section>
+        <section className='about-image'>
+          <img src={thechefs} alt='the chefs'/>
+        </section>
+      </section>
+
     </main>
   );
 }
