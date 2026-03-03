@@ -55,11 +55,12 @@ function Specials() {
 
               <section className='order-online'>
                 <nav>
-                  <a href='#'>Order Online</a>
+                  <a href='#' aria-label='On Click - Order Online'>Order Online</a>
                   <img
                     className='order-icon'
                     src={ordericon}
                     alt='Order Icon'
+                    aria-hidden='true'
                   />
                 </nav>
               </section>

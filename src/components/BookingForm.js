@@ -9,6 +9,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!isFormValid) return;
     const formData = {
       date,
       time,
@@ -18,6 +19,8 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
 
     submitForm(formData);
   };
+
+  const isFormValid = date && time && guests >= 1 && guests <= 10 && occasion;
 
   return (
     <form className='booking-form' onSubmit={handleSubmit}>
@@ -31,6 +34,8 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             type='date'
             id='res-date'
             value={date}
+            required
+            min={new Date().toISOString().split('T')[0]}
             onChange={(e) => {
               setDate(e.target.value);
               dispatch(e.target.value);
@@ -44,6 +49,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
           <select
             id='res-time'
             value={time}
+            required
             onChange={(e) => setTime(e.target.value)}
           >
             {availableTimes.map((t, index) => (
@@ -60,9 +66,12 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             id='guests'
             min='1'
             max='10'
+            aria-describedby='guests-hint'
+            required
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
           />
+          <p id='guests-hint'>Minimum 1, maximum 10 guests</p>
         </div>
 
         {/* Occasion Field */}
@@ -71,6 +80,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
           <select
             id='occasion'
             value={occasion}
+            required
             onChange={(e) => setOccasion(e.target.value)}
           >
             <option>Birthday</option>
@@ -80,7 +90,11 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
 
         {/* Submit Button */}
         <div className='form-group'>
-          <button className='booking-button' type='submit'>
+          <button
+            className='booking-button'
+            disabled={!isFormValid}
+            type='submit'
+          >
             Make Your Reservation
           </button>
         </div>

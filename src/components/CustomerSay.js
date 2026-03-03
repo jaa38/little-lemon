@@ -26,8 +26,8 @@ function CustomerSay() {
   ];
 
   return (
-    <section className='testimonials'>
-      <h2>Testimonials</h2>
+    <section className='testimonials' aria-labelledby='testimonials-headings'>
+      <h2 id="testimonials-heading">Testimonials</h2>
 
       <section className='testimonial-cards'>
         {testimonials.map((person, index) => (
