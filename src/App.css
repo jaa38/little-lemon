@@ -23,6 +23,8 @@ button {
   font-size: 16px;
   color: black;
   align-items: center;
+  min-height: 60px;
+  width: fit-content;
 }
 
 .header {
@@ -181,9 +183,12 @@ button {
   color: #495e57;
 }
 
-.information-section {
+section.information-section {
   padding-left: 24px;
   padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 @media (min-width: 1024px) {
@@ -307,7 +312,7 @@ section.testimonial-cards {
   grid-area: footer;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 80px 120px;
-  background-color:#08b834
+  background-color: #08b834;
 }
 
 .footer-information ul {
@@ -352,7 +357,7 @@ nav ul {
 }
 
 fieldset {
-  border:#ee9972;
+  border: #ee9972;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -367,4 +372,26 @@ legend {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.booking-button {
+  align-self: center;
+  width: 100%;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.booking-table th,
+.booking-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.booking-table th {
+  background-color: #f4f4f4;
 }

@@ -1,19 +1,24 @@
-import { updateTimes, initializeTimes } from "./Main";
-test("updateTimes returns the same state for now", () => {
-  const initialState = [
-    "17:00",
-    "18:00",
-    "19:00",
-  ];
+import { initializeTimes, updateTimes } from "./Main";
+import { fetchAPI } from "../api";
 
-  const result = updateTimes(initialState, "2024-12-25");
+jest.mock("../api");
 
-  expect(result).toEqual([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
-});
+test("initializeTimes returns available times from API", () => {
+  fetchAPI.mockReturnValue(["17:00", "18:00"]);
+
+  const result = initializeTimes()
+
+  expect(result).toEqual(["17:00", "18:00"]);
+
+})
+
+test("updateTimes returns updated times based on selected date", () => {
+  fetchAPI.mockReturnValue(["19:00", "20:00"]);
+
+  const state = [];
+  const action = "2024-12-25";
+
+  const result = updateTimes(state, action);
+
+  expect(result).toEqual(["19:00", "20:00"]);
+})
